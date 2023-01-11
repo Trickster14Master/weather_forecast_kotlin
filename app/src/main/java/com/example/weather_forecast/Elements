@@ -1,0 +1,75 @@
+Общее
+    modifier
+        элемент займйт все место по ширене
+            Modifier.fillMaxWidth()
+        элемент заёмёт всё доступное место
+            Modifier.fillMaxSize()
+        отступ с оригинальной позиции
+            Modifier.offset(x , y)
+        отступ элемента по всем сторонам
+            Modifier.padding(15.dp)
+        отступ с лева
+            Modifier.padding(start = 10.dp)
+        размер элемента
+            Modifier.size()
+        помещаем элемент в круглую рамке
+            Modifier.clip(CircleShape)
+
+        выполнять код по нажатию на элемент
+            Modifier.clickable{}
+        скролинг элементов
+            Modifier.verticalScroll(rememberScrollState())
+        множество возможностей1 для взаимодействия с пользователем в зависимости от того как он нажал и тд
+            Modifier.pointerInput(Unit){}
+
+
+    shape
+        закругление углов
+        shape = RoundedCornerShape(15.dp),
+
+    elevation
+            приподнимаем элемент
+            elevation = 5.dp
+
+Виджеты и их пораметры
+    Тоже самое что и обычный контейнер только есть возможность управлять место положением элементов в нутри
+    Box:
+        Распологает элементы в чентре
+        contentAlignment = Alignment.Center
+        распределяет элемент по краям
+        horizontalArrangement = Arrangement.SpaceBetween
+
+    отоброжает текст
+    Text:
+        указываем размер текста
+        style = TextStyle(fontSize = 40.sp)
+        указываем цвет текста
+        color = Color.White
+
+
+    расположение элементов по горезонтале
+    Row:
+        распологаем элменты по горезонтали в равных ечейках
+        horizontalArrangement = Arrangement.SpaceBetween
+        распределить элементы по центру в горезонтали
+        verticalAlignment = Alignment.CenterVertically
+
+    Расположение элементов по вертикали
+    Column:
+        расположение элементов в нутри по центру
+
+
+
+    использование картинки
+    Image(
+        путь до картинки
+        painter = painterResource(id = R.drawable.image0),
+        contentDescription = "image",
+        обрезаем картинку если она не влизает
+        contentScale = ContentScale.Crop,
+        отступ, размер картинки, и закругляем её
+        modifier = Modifier
+            .padding(5.dp)
+            .size(50.dp)
+            .clip(CircleShape),)
+
